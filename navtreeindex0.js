@@ -1,0 +1,22 @@
+var NAVTREEINDEX0 =
+{
+"dir_2a6e3f79893c8a7dc8394f2fbca4088c.html":[2,0,0,0],
+"dir_865c69f5dfc300b3ce2b6196bbcdd125.html":[2,0,0,0,0],
+"dir_c8984f1860c11f62f47abb6761e46c1e.html":[2,0,0],
+"dispatch_8hpp.html":[2,0,0,1],
+"files.html":[2,0],
+"group__group-concept.html":[1,0],
+"group__group-details.html":[1,2],
+"group__group-meta.html":[1,1],
+"index.html":[],
+"index.html":[0],
+"index.html#main-dispatch":[0,2,1],
+"index.html#main-free-function":[0,2,0],
+"index.html#main-howto":[0,1],
+"index.html#main-preface":[0,0],
+"index.html#main-rationale":[0,2],
+"modules.html":[1],
+"pages.html":[],
+"transfer__qualifiers_8hpp.html":[2,0,0,0,0,0],
+"usergroup0.html":[2]
+};
