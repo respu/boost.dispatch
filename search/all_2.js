@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['implementation_20details',['Implementation details',['../group__group-details.html',1,'']]]
+  ['config_2ehpp',['config.hpp',['../config_8hpp.html',1,'']]],
+  ['concepts',['Concepts',['../group__group-concept.html',1,'']]]
 ];

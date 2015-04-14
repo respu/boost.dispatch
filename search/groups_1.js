@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['implementation_20details',['Implementation details',['../group__group-details.html',1,'']]]
+  ['extension_20points',['Extension points',['../group__group-extension.html',1,'']]]
 ];

@@ -1,24 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "cdimt",
-  1: "dt",
-  2: "cim",
-  3: "m"
+  0: "abcdeimtv",
+  1: "mt",
+  2: "acdmtv",
+  3: "mt",
+  4: "ceim",
+  5: "m"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "groups",
-  3: "pages"
+  1: "classes",
+  2: "files",
+  3: "typedefs",
+  4: "groups",
+  5: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Modules",
-  3: "Pages"
+  1: "Classes",
+  2: "Files",
+  3: "Typedefs",
+  4: "Modules",
+  5: "Pages"
 };
 
