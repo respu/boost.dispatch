@@ -13,11 +13,9 @@ include(make_coverage)
 add_definitions(-DBOOST_ENABLE_ASSERT_HANDLER)
 
 set ( SOURCES
-      model_of.cpp
-      primitive_of.cpp
-      transfer_qualifiers.cpp
-      value_of.cpp
+      boost_array.cpp
+      std_array.cpp
     )
 
-make_unit( "boost.dispatch.meta" ${SOURCES})
-make_coverage("boost.dispatch.meta" ${SOURCES})
+make_unit( "boost.dispatch.adapted" ${SOURCES})
+make_coverage("boost.dispatch.adapted" ${SOURCES})

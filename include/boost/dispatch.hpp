@@ -16,6 +16,12 @@
 #ifndef BOOST_DISPATCH_HPP_INCLUDED
 #define BOOST_DISPATCH_HPP_INCLUDED
 
+#include <boost/dispatch/config.hpp>
+#include <boost/dispatch/meta/model_of.hpp>
+#include <boost/dispatch/meta/primitive_of.hpp>
+#include <boost/dispatch/meta/transfer_qualifiers.hpp>
+#include <boost/dispatch/meta/value_of.hpp>
+
 namespace boost { namespace dispatch
 {
   namespace concept
@@ -37,10 +43,23 @@ namespace boost { namespace dispatch
   namespace detail
   {
     /*!
-      @defgroup group-details Implementation details
+      @defgroup group-detail Implementation details
       Implementation details related components
     **/
   }
 
+  namespace ext
+  {
+    /*!
+      @defgroup group-extension Extension points
+      Extension points for library components
+    **/
+  }
+
+    /*!
+      @defgroup group-adapted External adapters
+      Adaptation header for external libraries
+    **/
 } }
+
 #endif

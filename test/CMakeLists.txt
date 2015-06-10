@@ -7,4 +7,5 @@
 ##                            http://www.boost.org/LICENSE_1_0.txt
 ##===================================================================================================
 
+add_subdirectory(adapted)
 add_subdirectory(meta)
