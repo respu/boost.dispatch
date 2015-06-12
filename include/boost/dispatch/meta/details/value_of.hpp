@@ -41,7 +41,7 @@ namespace boost { namespace dispatch
     template<class T, class Enable = void>
     struct value_of
     {
-      typedef T type;
+      using type = T;
     };
 
     /*!
