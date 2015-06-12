@@ -38,7 +38,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Boost.Dispatch
-   &#160;<span id="projectnumber">0.0.1-28-g27b6f9c (pre-release)</span>
+   &#160;<span id="projectnumber">0.0.2 (release)</span>
    </div>
    <div id="projectbrief">Unit and Performances Testing</div>
   </td>
@@ -108,25 +108,39 @@ $(document).ready(function(){initNavTree('group__group-meta.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1factory__of.html">boost::dispatch::meta::factory_of&lt; T, Limit &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive meta-model generator.  <a href="structboost_1_1dispatch_1_1meta_1_1factory__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1model__of.html">boost::dispatch::meta::model_of&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Model generator meta-function.  <a href="structboost_1_1dispatch_1_1meta_1_1model__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1primitive__of.html">boost::dispatch::meta::primitive_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primitive type computation.  <a href="structboost_1_1dispatch_1_1meta_1_1primitive__of.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html">boost::dispatch::meta::transfer_qualifiers&lt; T, U &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer qualifiers between types.  <a href="structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1value__of.html">boost::dispatch::meta::value_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying type evaluation.  <a href="structboost_1_1dispatch_1_1meta_1_1value__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gae8cf847f20c8a4d4f2c6a23b89cf14a9"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae8cf847f20c8a4d4f2c6a23b89cf14a9"></a>
+<tr class="memitem:ga917e1113a57993477bb58476ed952267"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga917e1113a57993477bb58476ed952267"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gae8cf847f20c8a4d4f2c6a23b89cf14a9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#gae8cf847f20c8a4d4f2c6a23b89cf14a9">boost::dispatch::model_of_t</a> = typename meta::model_of&lt; T &gt;::type</td></tr>
-<tr class="memdesc:gae8cf847f20c8a4d4f2c6a23b89cf14a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1model__of.html" title="Model generator meta-function. ">meta::model_of</a>. <br /></td></tr>
-<tr class="separator:gae8cf847f20c8a4d4f2c6a23b89cf14a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga917e1113a57993477bb58476ed952267"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#ga917e1113a57993477bb58476ed952267">boost::dispatch::primitive_of_t</a> = typename meta::primitive_of&lt; T &gt;::type</td></tr>
+<tr class="memdesc:ga917e1113a57993477bb58476ed952267"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1primitive__of.html" title="Primitive type computation. ">meta::primitive_of</a>. <br /></td></tr>
+<tr class="separator:ga917e1113a57993477bb58476ed952267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa8f2142e6ad3d2bc0a9072f651b9f2be"></a>
 template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#gaa8f2142e6ad3d2bc0a9072f651b9f2be">boost::dispatch::transfer_qualifiers_t</a> = typename meta::transfer_qualifiers&lt; T, U &gt;::type</td></tr>
 <tr class="memdesc:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html" title="Transfer qualifiers between types. ">meta::transfer_qualifiers</a>. <br /></td></tr>
 <tr class="separator:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21351370a7397ee3be3cfaaca6df9953"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga21351370a7397ee3be3cfaaca6df9953"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga21351370a7397ee3be3cfaaca6df9953"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#ga21351370a7397ee3be3cfaaca6df9953">boost::dispatch::value_of_t</a> = typename meta::value_of&lt; T &gt;::type</td></tr>
+<tr class="memdesc:ga21351370a7397ee3be3cfaaca6df9953"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1value__of.html" title="Underlying type evaluation. ">meta::value_of</a>. <br /></td></tr>
+<tr class="separator:ga21351370a7397ee3be3cfaaca6df9953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

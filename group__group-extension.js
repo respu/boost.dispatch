@@ -1,4 +1,6 @@
 var group__group_extension =
 [
-    [ "model_of", "structboost_1_1dispatch_1_1ext_1_1model__of.html", null ]
+    [ "model_of", "structboost_1_1dispatch_1_1ext_1_1model__of.html", null ],
+    [ "value_of", "structboost_1_1dispatch_1_1ext_1_1value__of.html", null ],
+    [ "value_of_cv", "structboost_1_1dispatch_1_1ext_1_1value__of__cv.html", null ]
 ];

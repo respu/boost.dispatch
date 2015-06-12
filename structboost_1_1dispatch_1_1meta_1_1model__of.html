@@ -38,7 +38,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Boost.Dispatch
-   &#160;<span id="projectnumber">0.0.1-28-g27b6f9c (pre-release)</span>
+   &#160;<span id="projectnumber">0.0.2 (release)</span>
    </div>
    <div id="projectbrief">Unit and Performances Testing</div>
   </td>
@@ -96,6 +96,8 @@ $(document).ready(function(){initNavTree('structboost_1_1dispatch_1_1meta_1_1mod
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="structboost_1_1dispatch_1_1meta_1_1model__of-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">boost::dispatch::meta::model_of&lt; T &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__group-meta.html">Meta-programming Utilities</a></div></div>  </div>
 </div><!--header-->
@@ -109,32 +111,30 @@ struct boost::dispatch::meta::model_of&lt; T &gt;</h3>
 <dl class="section user"><dt>Models:</dt><dd></dd></dl>
 <p><a href="http://www.boost.org/doc/libs/release/libs/mpl/doc/refmanual/metafunction.html">Metafunction</a></p>
 <dl class="section user"><dt>Semantic:</dt><dd></dd></dl>
-<dl class="section user"><dt>Usage:</dt><dd></dd></dl>
+<p>For any type <code>T</code>,</p>
+<div class="fragment"><div class="line">meta::model_of&lt;T&gt;::type;</div>
+</div><!-- fragment --><p>defines a template alias so that:</p>
+<div class="fragment"><div class="line">std::is_same&lt;meta::model_of&lt;T&gt;::type&lt;meta::value_of_t&lt;T&gt;&gt;, T&gt;::value</div>
+</div><!-- fragment --><p>evaluates to <code>true</code>.</p>
 <dl class="section user"><dt>Extension Point:</dt><dd></dd></dl>
 <p><a class="el" href="structboost_1_1dispatch_1_1meta_1_1model__of.html" title="Model generator meta-function. ">meta::model_of</a> can be specialized for user-defined types by either:</p>
 <ul>
 <li>Directly overloading the <a class="el" href="structboost_1_1dispatch_1_1meta_1_1model__of.html" title="Model generator meta-function. ">meta::model_of</a> class for a given type</li>
 <li>Specialize (eventually through SFINAE) the <a class="el" href="structboost_1_1dispatch_1_1ext_1_1model__of.html" title="SFINAE-enabled extension point for meta::model_of. ">ext::model_of</a> class</li>
 </ul>
+<p>Specialization for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1model__of.html" title="Model generator meta-function. ">meta::model_of</a> are provided for most of standard and Boost types. See the <a class="el" href="group__group-adapted.html">External adapters</a> page.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type to build a Model <a href="http://www.boost.org/doc/libs/release/libs/mpl/doc/refmanual/metafunction.html">Metafunction</a> from </td></tr>
+    <tr><td class="paramname">T</td><td>Type to turn into a generator <a href="http://www.boost.org/doc/libs/release/libs/mpl/doc/refmanual/metafunction.html">Metafunction</a> </td></tr>
   </table>
   </dd>
 </dl>
-</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for boost::dispatch::meta::model_of&lt; T &gt;:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
- <div class="center">
-  <img src="structboost_1_1dispatch_1_1meta_1_1model__of.png" usemap="#boost::dispatch::meta::model_of&lt; T &gt;_map" alt=""/>
-  <map id="boost::dispatch::meta::model_of&lt; T &gt;_map" name="boost::dispatch::meta::model_of&lt; T &gt;_map">
-<area href="structboost_1_1dispatch_1_1ext_1_1model__of.html" alt="boost::dispatch::ext::model_of&lt; T &gt;" shape="rect" coords="0,0,215,24"/>
-</map>
- </div></div>
+<p>Inherits <a class="el" href="structboost_1_1dispatch_1_1ext_1_1model__of.html">boost::dispatch::ext::model_of&lt; T &gt;</a>.</p>
+
+<p>Inherited by boost::dispatch::meta::model_of&lt; T &amp; &gt;, boost::dispatch::meta::model_of&lt; T &amp;&amp; &gt;, and boost::dispatch::meta::model_of&lt; T const  &gt;.</p>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>boost/dispatch/meta/<a class="el" href="model__of_8hpp.html">model_of.hpp</a></li>
+<li>boost/dispatch/adapted/boost/<a class="el" href="boost_2array_8hpp.html">array.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
