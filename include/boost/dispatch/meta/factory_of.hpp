@@ -16,29 +16,9 @@
 #ifndef BOOST_DISPATCH_META_FACTORY_OF_HPP_INCLUDED
 #define BOOST_DISPATCH_META_FACTORY_OF_HPP_INCLUDED
 
-#include <boost/dispatch/meta/model_of.hpp>
-#include <boost/dispatch/meta/value_of.hpp>
-#include <boost/dispatch/meta/primitive_of.hpp>
-#include <boost/mpl/apply.hpp>
+#include <boost/dispatch/meta/detail/factory_of.hpp>
 
-namespace boost { namespace dispatch { namespace detail
-{
-  template<typename T, typename U> struct factory_of
-  {
-                          using v_t = boost::dispatch::value_of_t<T>;
-    template<typename X>  using f_t = typename detail::factory_of<v_t,U>::template type<X>;
-
-    template<typename X>
-    using type = typename dispatch::meta::model_of<T>::template type<f_t<X>>;
-  };
-
-  template<typename T> struct factory_of<T, T>
-  {
-    template<typename X> using type = X;
-  };
-}
-
-namespace meta
+namespace boost { namespace dispatch { namespace meta
 {
   /*!
     @ingroup group-meta
@@ -63,27 +43,19 @@ namespace meta
     using type = boost::dispatch::meta::factory_of<T>::type;
     @endcode
 
-    return a @mpllambda so that, for any type @c U:
+    return a template alias so that, for any type @c U:
 
     @code
-    using X = boost::mpl::apply<type, U>::type;
+    using X = type<U>;
     @endcode
 
     generates a type @c X so that:
 
     @code
-    std::is_same<boost::dispatch::meta::primitive_of<X>::type, U>::value
+    std::is_same<boost::dispatch::primitive_of_t<X>, U>::value
     @endcode
 
-    and
-
-    @code
-    std::is_same< boost::dispatch::meta::model_of<X>::type
-                , boost::dispatch::meta::model_of<T>::type
-                >::value
-    @endcode
-
-    evaluate to @c true.
+    and for which the boost::dispatch::meta::model_of template aliases are equivalent.
 
     Put in another way, boost::dispatch::meta::factory_of is a recursive application of
     boost::dispatch::meta::model_of so that every nested type are traversed during reconstruction.
