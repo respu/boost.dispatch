@@ -2,7 +2,7 @@
 /*!
   @file
 
-  Defines the meta::primitive_of meta-function implementation details
+  Introspection header gateway
 
   @copyright 2009 - 2012 LASMEA UMR 6602 CNRS/Univ. Clermont II
   @copyright 2009 - 2015 LRI UMR 8623 CNRS/Univ Paris Sud XI
@@ -13,22 +13,12 @@
 
 **/
 //==================================================================================================
-#ifndef BOOST_DISPATCH_META_DETAIL_PRIMITIVE_OF_HPP_INCLUDED
-#define BOOST_DISPATCH_META_DETAIL_PRIMITIVE_OF_HPP_INCLUDED
+#ifndef BOOST_DISPATCH_META_INTROSPECTION_HPP_INCLUDED
+#define BOOST_DISPATCH_META_INTROSPECTION_HPP_INCLUDED
 
-#include <boost/dispatch/meta/value_of.hpp>
-
-namespace boost { namespace dispatch { namespace detail
-{
-  template<class T, class Origin> struct primitive_of
-  {
-    using type = typename detail::primitive_of<typename meta::value_of<T>::type, T>::type;
-  };
-
-  template<class T> struct primitive_of<T, T>
-  {
-    using type = T;
-  };
-} } }
+#include <boost/dispatch/meta/introspection/model_of.hpp>
+#include <boost/dispatch/meta/introspection/value_of.hpp>
+#include <boost/dispatch/meta/introspection/factory_of.hpp>
+#include <boost/dispatch/meta/introspection/primitive_of.hpp>
 
 #endif
