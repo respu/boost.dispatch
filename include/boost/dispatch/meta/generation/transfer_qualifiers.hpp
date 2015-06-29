@@ -13,8 +13,8 @@
 
 **/
 //==================================================================================================
-#ifndef BOOST_DISPATCH_META_TRANSFER_QUALIFIERS_HPP_INCLUDED
-#define BOOST_DISPATCH_META_TRANSFER_QUALIFIERS_HPP_INCLUDED
+#ifndef BOOST_DISPATCH_META_GENERATION_TRANSFER_QUALIFIERS_HPP_INCLUDED
+#define BOOST_DISPATCH_META_GENERATION_TRANSFER_QUALIFIERS_HPP_INCLUDED
 
 #include <type_traits>
 
