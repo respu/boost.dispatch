@@ -2,7 +2,7 @@
 /*!
   @file
 
-  Introspection header gateway
+  Defines the meta::behave_as meta-function
 
   @copyright 2009 - 2012 LASMEA UMR 6602 CNRS/Univ. Clermont II
   @copyright 2009 - 2015 LRI UMR 8623 CNRS/Univ Paris Sud XI
@@ -13,15 +13,24 @@
 
 **/
 //==================================================================================================
-#ifndef BOOST_DISPATCH_META_INTROSPECTION_HPP_INCLUDED
-#define BOOST_DISPATCH_META_INTROSPECTION_HPP_INCLUDED
+#ifndef BOOST_DISPATCH_META_INTROSPECTION_BEHAVE_AS_HPP_INCLUDED
+#define BOOST_DISPATCH_META_INTROSPECTION_BEHAVE_AS_HPP_INCLUDED
 
-#include <boost/dispatch/meta/introspection/sign_of.hpp>
-#include <boost/dispatch/meta/introspection/model_of.hpp>
-#include <boost/dispatch/meta/introspection/value_of.hpp>
-#include <boost/dispatch/meta/introspection/behave_as.hpp>
-#include <boost/dispatch/meta/introspection/is_natural.hpp>
-#include <boost/dispatch/meta/introspection/factory_of.hpp>
 #include <boost/dispatch/meta/introspection/primitive_of.hpp>
+
+namespace boost { namespace dispatch
+{
+  /*!
+    @ingroup group-meta
+    @brief Apply meta-function to a type's Primitive type
+
+    Apply a meta-function to the Primitive type of its input.
+
+    @tparam T         Type to manipulate
+    @tparam Function  Meta-function to apply
+  **/
+  template<typename T, template<class> class Function>
+  using behave_as = Function<boost::dispatch::primitive_of<T>>;
+} }
 
 #endif
