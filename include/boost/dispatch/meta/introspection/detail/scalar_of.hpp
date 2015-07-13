@@ -2,7 +2,7 @@
 /*!
   @file
 
-  Defines the meta::scalar_of meta-function
+  Defines the meta::scalar_of meta-function extension point
 
   @copyright 2009 - 2012 LASMEA UMR 6602 CNRS/Univ. Clermont II
   @copyright 2009 - 2015 LRI UMR 8623 CNRS/Univ Paris Sud XI
@@ -21,6 +21,7 @@
 
 namespace boost { namespace dispatch
 {
+#if !defined(DOXYGEN_ONLY)
   namespace detail
   {
     template<typename T, typename U = boost::dispatch::value_of<T>>
@@ -32,6 +33,7 @@ namespace boost { namespace dispatch
       using type = T;
     };
   }
+#endif
 
   namespace ext
   {
