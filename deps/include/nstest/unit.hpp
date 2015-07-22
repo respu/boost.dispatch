@@ -25,8 +25,6 @@
 #include <nstest/unit/main.hpp>
 #endif
 
-#include <nstest/unit/detail/assertion_failure.hpp>
-
 namespace nstest
 {
   namespace unit
