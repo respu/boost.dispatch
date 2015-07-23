@@ -2,7 +2,7 @@
 /*!
   @file
 
-  Defines the ULP related helpers
+  Defines the relative error testing related helpers
 
   @copyright 2009 - 2015 LRI UMR 8623 CNRS/Univ Paris Sud XI
   @copyright 2012 - 2015 NumScale SAS
@@ -12,37 +12,39 @@
 
 **/
 //==================================================================================================
-#ifndef NSTEST_UNIT_DETAIL_ULP_HPP_INCLUDED
-#define NSTEST_UNIT_DETAIL_ULP_HPP_INCLUDED
+#ifndef NSTEST_UNIT_DETAIL_RELATIVE_HPP_INCLUDED
+#define NSTEST_UNIT_DETAIL_RELATIVE_HPP_INCLUDED
 
 #include <nstest/unit/detail/approx.hpp>
-#include <nstest/unit/detail/ulpdist.hpp>
+#include <nstest/unit/detail/reldist.hpp>
 #include <string>
 
 namespace nstest
 {
   namespace detail
   {
-    struct ulp_measure
+    struct relative_measure
     {
       template<typename T, typename U>
-      auto operator()(T const& data, U const& ref) const -> decltype(ulpdist(data,ref))
+      auto operator()(T const& data, U const& ref) const -> decltype(reldist(data,ref))
       {
-        using nstest::ulpdist;
-        return ulpdist(data,ref);
+        using nstest::reldist;
+        return reldist(data,ref);
       }
 
       template<typename Stream> static void to_stream(Stream& s, double v)
       {
-        s << " (" << v << " ULPs)\n";
+        s.precision(2);
+        s << " (" << std::fixed << v*100. << " %)\n";
       }
     };
   }
-  // Perform ULP distance computation and report
-  template<typename R> using ulp_ = approx_<detail::ulp_measure, R>;
 
-  // Simple ulp_ constructor like call
-  template<typename R> inline ulp_<R> ulp(R const& t, double n) { return {t,n}; }
+  // Perform relative distance computation and report
+  template<typename R> using relative_ = approx_<detail::relative_measure, R>;
+
+  // Simple relative_ constructor like call
+  template<typename R> inline relative_<R> relative(R const& t, double n) { return {t,n/100.}; }
 }
 
 #endif
