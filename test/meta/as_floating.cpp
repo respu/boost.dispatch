@@ -12,8 +12,7 @@
 #include <boost/dispatch/meta/generation/make_floating.hpp>
 #include <cstdint>
 
-#include <nstest/unit.hpp>
-#include <nstest/unit/tests/types.hpp>
+#include <nstest.hpp>
 
 NSTEST_CASE_TPL( "Generate floating from floating types", (float)(double) )
 {

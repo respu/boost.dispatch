@@ -13,8 +13,7 @@
 #include <cstdint>
 #include <cstddef>
 
-#include <nstest/unit.hpp>
-#include <nstest/unit/tests/types.hpp>
+#include <nstest.hpp>
 
 NSTEST_CASE( "Parenthood of base hierarchies" )
 {
