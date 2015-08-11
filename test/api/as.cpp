@@ -160,7 +160,7 @@ NSTEST_CASE( "as(x) generates boost::dispatch::as_<T>")
 {
   bar   x;
   bar&  rx = x;
-  bar const   y;
+  bar const   y{};
   bar const& ry = y;
 
   boost::ignore_unused(rx,ry);
