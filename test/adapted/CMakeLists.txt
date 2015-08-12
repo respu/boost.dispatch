@@ -14,6 +14,7 @@ add_definitions(-DBOOST_ENABLE_ASSERT_HANDLER)
 
 set ( SOURCES
       boost_array.cpp
+      parent.cpp
       std_array.cpp
       std_integral_constant.cpp
     )
