@@ -8,20 +8,14 @@
   (See accompanying file LICENSE.md or copy at http://boost.org/LICENSE_1_0.txt)
 */
 //==================================================================================================
-#include <boost/dispatch/meta/generation/make_floating.hpp>
+#ifndef TUTU_INCLUDED
+#define TUTU_INCLUDED
 
-#include <stf.hpp>
+#include <boost/dispatch/function/register_namespace.hpp>
 
-STF_CASE( "Generate raw floating point types")
+namespace tutu { namespace titi
 {
-  STF_TYPE_IS( (boost::dispatch::make_floating<8>) , double );
-  STF_TYPE_IS( (boost::dispatch::make_floating<4>) , float  );
-}
+  BOOST_DISPATCH_REGISTER_NAMESPACE(ext, (boost::dispatch::generic_dispatcher<Tag,Site>) );
+} }
 
-template<typename T> using ptr_t  =T*;
-
-STF_CASE( "Generate transformed floating point types")
-{
-  STF_TYPE_IS( (boost::dispatch::make_floating<8,ptr_t>) , double* );
-  STF_TYPE_IS( (boost::dispatch::make_floating<4,ptr_t>) , float*  );
-}
+#endif
