@@ -11,8 +11,6 @@
 #ifndef ARCH_TUTU_FOO_INCLUDED
 #define ARCH_TUTU_FOO_INCLUDED
 
-#include <string>
-
 namespace tutu { namespace titi { namespace ext
 {
   template<typename T> struct impl_foo<boost::dispatch::scalar_<boost::dispatch::int8_<T>>>
@@ -22,7 +20,7 @@ namespace tutu { namespace titi { namespace ext
 
   struct bob
   {
-    template<typename T> std::string operator()(T) { return "wazzoo #"; }
+    template<typename T> char operator()(T) const { return 'Z'; }
   };
 
   template<typename T>
