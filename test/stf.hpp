@@ -20,6 +20,7 @@
 #include <unordered_map>
 #include <sstream>
 #include <cstdlib>
+#include <algorithm>
 #include <string>
 
 namespace stf
@@ -943,6 +944,7 @@ do                                                                              
 
 
 #include <vector>
+#include <algorithm>
 #include <string>
 
 namespace stf
@@ -1146,6 +1148,7 @@ namespace stf
   }
 }
 
+#include <algorithm>
 #include <string>
 
 namespace stf
@@ -1261,6 +1264,7 @@ namespace stf
   }
 }
 
+#include <algorithm>
 #include <string>
 
 namespace stf
@@ -1341,6 +1345,7 @@ do                                                                              
 #include <boost/core/demangle.hpp>
 #include <type_traits>
 #include <typeinfo>
+#include <algorithm>
 #include <string>
 
 namespace stf
