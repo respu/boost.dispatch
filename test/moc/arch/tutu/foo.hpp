@@ -13,7 +13,7 @@
 
 namespace tutu { namespace titi { namespace ext
 {
-  template<typename T> struct impl_foo<boost::dispatch::scalar_<boost::dispatch::int8_<T>>>
+  template<typename T> struct impl_foo_<boost::dispatch::scalar_<boost::dispatch::int8_<T>>>
   {
     char operator()( T ) const { return '#'; }
   };
@@ -24,7 +24,7 @@ namespace tutu { namespace titi { namespace ext
   };
 
   template<typename T>
-  impl_foo<boost::dispatch::scalar_<boost::dispatch::int8_<T>>>
+  impl_foo_<boost::dispatch::scalar_<boost::dispatch::int8_<T>>>
   dispatching_foo_( adl_helper const&, boost::dispatch::cpu_ const&
                   , boost::dispatch::scalar_<boost::dispatch::int8_<T>> const&
                   )
