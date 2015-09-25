@@ -35,6 +35,7 @@ namespace boost { namespace dispatch
   **/
   template<typename T, typename N> struct tuple_ : unspecified_<T>
   {
+    /// tuple_ parent hierarchy type
     using parent = unspecified_<T>;
   };
 
@@ -52,6 +53,7 @@ namespace boost { namespace dispatch
   **/
   template<typename T, typename N> struct bag_ : bag_<typename T::parent, N>
   {
+    /// bag_ parent hierarchy type
     using parent = bag_<typename T::parent, N>;
   };
 

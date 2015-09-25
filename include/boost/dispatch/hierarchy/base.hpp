@@ -29,7 +29,6 @@ namespace boost { namespace dispatch
   **/
   template<typename T> struct type_
   {
-    using type          =  T;
     using parent        =  type_;
     using hierarchy_tag =  detail::hierarchy_tag;
   };
@@ -42,7 +41,6 @@ namespace boost { namespace dispatch
   **/
   template<typename T> struct architecture_
   {
-    using type          =  T;
     using parent        =  architecture_;
     using hierarchy_tag =  detail::hierarchy_tag;
   };
@@ -55,7 +53,6 @@ namespace boost { namespace dispatch
   **/
   template<typename T> struct function_
   {
-    using type          =  T;
     using parent        =  function_;
     using hierarchy_tag =  detail::hierarchy_tag;
   };
