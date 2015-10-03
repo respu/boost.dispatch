@@ -69,7 +69,7 @@ namespace boost { namespace dispatch
       struct result<This(Args...)>
            : boost::result_of
                     < decltype( dispatching ( Discriminant{}, Tag{}, default_site<Tag>{}
-                                            , ::boost::dispatch::hierarchy_of<Args&&>()...
+                                            , ::boost::dispatch::hierarchy_of_t<Args&&>()...
                                             )
                               )(Args...)
                     >
@@ -80,7 +80,7 @@ namespace boost { namespace dispatch
       operator()(Args&&... args) const
       {
         return dispatching( Discriminant{}, Tag{}, default_site<Tag>{}
-                          , ::boost::dispatch::hierarchy_of<Args&&>()...
+                          , ::boost::dispatch::hierarchy_of_t<Args&&>()...
                           )
                           ( std::forward<Args>(args)... );
       }
@@ -90,7 +90,7 @@ namespace boost { namespace dispatch
       BOOST_AUTO_DECLTYPE_BODY_SFINAE
       (
         dispatching ( Discriminant{}, Tag{}, default_site<Tag>{}
-                    , ::boost::dispatch::hierarchy_of<Args&&>()...
+                    , ::boost::dispatch::hierarchy_of_t<Args&&>()...
                     )( std::forward<Args>(args)... )
       );
       #endif
