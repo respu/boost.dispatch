@@ -8,4 +8,6 @@
 ##===================================================================================================
 
 add_subdirectory(adapted)
+add_subdirectory(api)
+add_subdirectory(hierarchy)
 add_subdirectory(meta)

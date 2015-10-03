@@ -17,21 +17,33 @@
 #define BOOST_DISPATCH_ADAPTED_STD_ARRAY_HPP_INCLUDED
 
 #include <array>
+#include <boost/dispatch/meta/introspection/value_of.hpp>
+#include <boost/dispatch/meta/introspection/model_of.hpp>
+#include <boost/dispatch/adapted/hierarchy/array.hpp>
+#include <boost/dispatch/hierarchy_of.hpp>
 
-namespace boost { namespace dispatch { namespace meta
+namespace boost { namespace dispatch
 {
-  template<typename T> struct model_of;
-  template<typename T> struct value_of;
-
-  template<typename T, std::size_t N> struct model_of<std::array<T,N>>
+  namespace ext
   {
-    template<typename X> using type = std::array<X,N>;
-  };
+    template<typename T, std::size_t N> struct model_of<std::array<T,N>>
+    {
+      template<typename X> struct apply { using type = std::array<X,N>; };
+    };
 
-  template<typename T, std::size_t N> struct value_of<std::array<T,N>>
-  {
-    using type = T;
-  };
-} } }
+    template<typename T, std::size_t N> struct value_of<std::array<T,N>>
+    {
+      using type = T;
+    };
+
+    template<typename T, std::size_t N, typename Origin>
+    struct hierarchy_of<std::array<T,N>,Origin>
+    {
+      using type = array_ < boost::dispatch::hierarchy_of_t<T,Origin>
+                          , std::integral_constant<std::size_t, N>
+                          >;
+    };
+  }
+} }
 
 #endif

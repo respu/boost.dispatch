@@ -44,8 +44,8 @@ include(parse_revision)
 ## Add include directories
 ##===================================================================================================
 include_directories ( ${PROJECT_SOURCE_DIR}/include
+                      ${PROJECT_SOURCE_DIR}/test
                       ${Boost_INCLUDE_DIRS}
-                      ${PROJECT_SOURCE_DIR}/deps/include
                     )
 
 ##===================================================================================================
@@ -56,9 +56,12 @@ add_subdirectory(doc)
 ##===================================================================================================
 ## Setup Unit & Coverage Test
 ##===================================================================================================
-enable_testing()
-include(coverage)
-setup_target_for_coverage(boost.dispatch)
-
+add_custom_target(tests)
 add_custom_target(unit)
+
+include(coverage)
+enable_testing()
+enable_coverage(boost.dispatch)
+add_dependencies(tests unit)
+
 add_subdirectory(test)

@@ -17,10 +17,9 @@
 #define BOOST_DISPATCH_HPP_INCLUDED
 
 #include <boost/dispatch/config.hpp>
-#include <boost/dispatch/meta/model_of.hpp>
-#include <boost/dispatch/meta/primitive_of.hpp>
+#include <boost/dispatch/hierarchy.hpp>
+#include <boost/dispatch/meta/introspection.hpp>
 #include <boost/dispatch/meta/transfer_qualifiers.hpp>
-#include <boost/dispatch/meta/value_of.hpp>
 
 namespace boost { namespace dispatch
 {
@@ -29,14 +28,6 @@ namespace boost { namespace dispatch
     /*!
       @defgroup group-concept Concepts
       Concepts defined by the library
-    **/
-  }
-
-  namespace meta
-  {
-    /*!
-      @defgroup group-meta Meta-programming Utilities
-      Meta-programming related components
     **/
   }
 
@@ -56,10 +47,25 @@ namespace boost { namespace dispatch
     **/
   }
 
-    /*!
-      @defgroup group-adapted External adapters
-      Adaptation header for external libraries
-    **/
+  /*!
+    @defgroup group-api User API
+    User level library components
+  **/
+
+  /*!
+    @defgroup group-meta Meta-programming Utilities
+    Meta-programming related components
+  **/
+
+  /*!
+    @defgroup group-hierarchy Predefined Hierarchies
+    Type hierarchies provided by the library
+  **/
+
+  /*!
+    @defgroup group-adapted External adapters
+    Adaptation header for external libraries
+  **/
 } }
 
 #endif

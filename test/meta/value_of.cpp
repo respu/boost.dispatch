@@ -8,16 +8,28 @@
   (See accompanying file LICENSE.md or copy at http://boost.org/LICENSE_1_0.txt)
 */
 //==================================================================================================
-#include <boost/dispatch/meta/value_of.hpp>
+#include <boost/dispatch/meta/introspection/value_of.hpp>
 
-#include <nstest/unit.hpp>
-#include <nstest/unit/tests/types.hpp>
+#include <stf.hpp>
 
-NSTEST_CASE( "value_of of basic types is type itself")
+using namespace boost::dispatch;
+
+STF_CASE( "value_of_t of basic types is type itself")
 {
-  NSTEST_TYPE_IS( boost::dispatch::value_of_t<float>        , float       );
-  NSTEST_TYPE_IS( boost::dispatch::value_of_t<float&>       , float&      );
-  NSTEST_TYPE_IS( boost::dispatch::value_of_t<float&&>      , float&&     );
-  NSTEST_TYPE_IS( boost::dispatch::value_of_t<float const>  , float const );
-  NSTEST_TYPE_IS( boost::dispatch::value_of_t<float const&> , float const&);
+  STF_TYPE_IS( value_of_t<float>        , float       );
+  STF_TYPE_IS( value_of_t<float&>       , float&      );
+  STF_TYPE_IS( value_of_t<float&&>      , float&&     );
+  STF_TYPE_IS( value_of_t<float const>  , float const );
+  STF_TYPE_IS( value_of_t<float const&> , float const&);
+}
+
+template<typename T> struct foo {};
+
+STF_CASE_TPL( "value_of_t of template types is template parameter", (int)(float)(char))
+{
+  STF_TYPE_IS( value_of_t<foo<T>>       , T );
+  STF_TYPE_IS( value_of_t<foo<T>&>      , T& );
+  STF_TYPE_IS( value_of_t<foo<T>&&>     , T&& );
+  STF_TYPE_IS( value_of_t<foo<T> const> , T const);
+  STF_TYPE_IS( value_of_t<foo<T> const&>, T const&);
 }

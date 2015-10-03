@@ -14,7 +14,11 @@ add_definitions(-DBOOST_ENABLE_ASSERT_HANDLER)
 
 set ( SOURCES
       boost_array.cpp
+      boost_fusion.cpp
+      parent.cpp
       std_array.cpp
+      std_integral_constant.cpp
+      std_tuple.cpp
     )
 
 make_unit( "boost.dispatch.adapted" ${SOURCES})
