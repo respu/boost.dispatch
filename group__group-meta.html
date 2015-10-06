@@ -38,7 +38,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Boost.Dispatch
-   &#160;<span id="projectnumber">0.0.2 (release)</span>
+   &#160;<span id="projectnumber">0.0.2-118-g284fc96 (pre-release)</span>
    </div>
    <div id="projectbrief">Unit and Performances Testing</div>
   </td>
@@ -108,39 +108,75 @@ $(document).ready(function(){initNavTree('group__group-meta.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1factory__of.html">boost::dispatch::meta::factory_of&lt; T, Limit &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive meta-model generator.  <a href="structboost_1_1dispatch_1_1meta_1_1factory__of.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1hierarchy__of.html">boost::dispatch::hierarchy_of&lt; T, Origin &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the hierarchy of a Type.  <a href="structboost_1_1dispatch_1_1hierarchy__of.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1model__of.html">boost::dispatch::meta::model_of&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Model generator meta-function.  <a href="structboost_1_1dispatch_1_1meta_1_1model__of.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1apply__sign.html">boost::dispatch::apply_sign&lt; T, Sign &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply sign to given type.  <a href="structboost_1_1dispatch_1_1apply__sign.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1primitive__of.html">boost::dispatch::meta::primitive_of&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primitive type computation.  <a href="structboost_1_1dispatch_1_1meta_1_1primitive__of.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1as__floating.html">boost::dispatch::as_floating&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn a type into an equivalent floating point type.  <a href="structboost_1_1dispatch_1_1as__floating.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html">boost::dispatch::meta::transfer_qualifiers&lt; T, U &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer qualifiers between types.  <a href="structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1as__integer.html">boost::dispatch::as_integer&lt; T, Sign &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn a type into an equivalent integer.  <a href="structboost_1_1dispatch_1_1as__integer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1meta_1_1value__of.html">boost::dispatch::meta::value_of&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying type evaluation.  <a href="structboost_1_1dispatch_1_1meta_1_1value__of.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1as__signed.html">boost::dispatch::as_signed&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn a type into an equivalent signed type.  <a href="structboost_1_1dispatch_1_1as__signed.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1as__unsigned.html">boost::dispatch::as_unsigned&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn a type into an equivalent unsigned type.  <a href="structboost_1_1dispatch_1_1as__unsigned.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1make__floating.html">boost::dispatch::make_floating&lt; Size, Transform &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a floating point type of a given size.  <a href="structboost_1_1dispatch_1_1make__floating.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1make__integer.html">boost::dispatch::make_integer&lt; Size, Sign, Transform &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an integer type of a given size and sign.  <a href="structboost_1_1dispatch_1_1make__integer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1transfer__qualifiers.html">boost::dispatch::transfer_qualifiers&lt; T, U &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer qualifiers between types.  <a href="structboost_1_1dispatch_1_1transfer__qualifiers.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1behave__as.html">boost::dispatch::behave_as&lt; T, Function &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply meta-function to a type's Primitive type.  <a href="structboost_1_1dispatch_1_1behave__as.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1factory__of.html">boost::dispatch::factory_of&lt; T, Limit &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive meta-model generator.  <a href="structboost_1_1dispatch_1_1factory__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1model__of.html">boost::dispatch::model_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Model generator meta-function.  <a href="structboost_1_1dispatch_1_1model__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1primitive__of.html">boost::dispatch::primitive_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primitive type computation.  <a href="structboost_1_1dispatch_1_1primitive__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1scalar__of.html">boost::dispatch::scalar_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the basic value type of an arbitrary type.  <a href="structboost_1_1dispatch_1_1scalar__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1sign__of.html">boost::dispatch::sign_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return sign of a type.  <a href="structboost_1_1dispatch_1_1sign__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1value__of.html">boost::dispatch::value_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying type evaluation.  <a href="structboost_1_1dispatch_1_1value__of.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1models.html">boost::dispatch::models&lt; T, Hierarchy &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a Type models a Hierarchy.  <a href="structboost_1_1dispatch_1_1models.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1dispatch_1_1property__of.html">boost::dispatch::property_of&lt; T, Origin &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the fundamental hierarchy of a Type.  <a href="structboost_1_1dispatch_1_1property__of.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga917e1113a57993477bb58476ed952267"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga917e1113a57993477bb58476ed952267"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga917e1113a57993477bb58476ed952267"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#ga917e1113a57993477bb58476ed952267">boost::dispatch::primitive_of_t</a> = typename meta::primitive_of&lt; T &gt;::type</td></tr>
-<tr class="memdesc:ga917e1113a57993477bb58476ed952267"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1primitive__of.html" title="Primitive type computation. ">meta::primitive_of</a>. <br /></td></tr>
-<tr class="separator:ga917e1113a57993477bb58476ed952267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa8f2142e6ad3d2bc0a9072f651b9f2be"></a>
-template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#gaa8f2142e6ad3d2bc0a9072f651b9f2be">boost::dispatch::transfer_qualifiers_t</a> = typename meta::transfer_qualifiers&lt; T, U &gt;::type</td></tr>
-<tr class="memdesc:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html" title="Transfer qualifiers between types. ">meta::transfer_qualifiers</a>. <br /></td></tr>
-<tr class="separator:gaa8f2142e6ad3d2bc0a9072f651b9f2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga21351370a7397ee3be3cfaaca6df9953"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga21351370a7397ee3be3cfaaca6df9953"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga21351370a7397ee3be3cfaaca6df9953"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta.html#ga21351370a7397ee3be3cfaaca6df9953">boost::dispatch::value_of_t</a> = typename meta::value_of&lt; T &gt;::type</td></tr>
-<tr class="memdesc:ga21351370a7397ee3be3cfaaca6df9953"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++14 style short-cut for <a class="el" href="structboost_1_1dispatch_1_1meta_1_1value__of.html" title="Underlying type evaluation. ">meta::value_of</a>. <br /></td></tr>
-<tr class="separator:ga21351370a7397ee3be3cfaaca6df9953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f8550b99a6e36d7128b5f47899dc3cf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga6f8550b99a6e36d7128b5f47899dc3cf"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta_ga6f8550b99a6e36d7128b5f47899dc3cf.html#ga6f8550b99a6e36d7128b5f47899dc3cf">boost::dispatch::target_value</a> = typename detail::target_value&lt; T &gt;::type</td></tr>
+<tr class="memdesc:ga6f8550b99a6e36d7128b5f47899dc3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the type wrapped by an instance of <code><a class="el" href="structboost_1_1dispatch_1_1as__.html" title="Provides a type wrapper allowing functions to receive type informations as an object. ">as_</a></code> .  <a href="group__group-meta_ga6f8550b99a6e36d7128b5f47899dc3cf.html#ga6f8550b99a6e36d7128b5f47899dc3cf">More...</a><br /></td></tr>
+<tr class="separator:ga6f8550b99a6e36d7128b5f47899dc3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d29bf65508d29b9fdd75e86c5196e49"><td class="memTemplParams" colspan="2">template&lt;typename Sequence &gt; </td></tr>
+<tr class="memitem:ga3d29bf65508d29b9fdd75e86c5196e49"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta_ga3d29bf65508d29b9fdd75e86c5196e49.html#ga3d29bf65508d29b9fdd75e86c5196e49">boost::dispatch::is_homogeneous</a> = typename detail::is_homogeneous_&lt; Sequence &gt;::type</td></tr>
+<tr class="memdesc:ga3d29bf65508d29b9fdd75e86c5196e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects homogeneous tuple.  <a href="group__group-meta_ga3d29bf65508d29b9fdd75e86c5196e49.html#ga3d29bf65508d29b9fdd75e86c5196e49">More...</a><br /></td></tr>
+<tr class="separator:ga3d29bf65508d29b9fdd75e86c5196e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38e92b09074a7e93346b5f770eaf6a2f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga38e92b09074a7e93346b5f770eaf6a2f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-meta_ga38e92b09074a7e93346b5f770eaf6a2f.html#ga38e92b09074a7e93346b5f770eaf6a2f">boost::dispatch::is_natural</a> = brigand::and_&lt; std::is_integral&lt; T &gt;, brigand::not_&lt; std::is_same&lt; T, bool &gt;&gt; &gt;</td></tr>
+<tr class="memdesc:ga38e92b09074a7e93346b5f770eaf6a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traits for detecting natural integral types.  <a href="group__group-meta_ga38e92b09074a7e93346b5f770eaf6a2f.html#ga38e92b09074a7e93346b5f770eaf6a2f">More...</a><br /></td></tr>
+<tr class="separator:ga38e92b09074a7e93346b5f770eaf6a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

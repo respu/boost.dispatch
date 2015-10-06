@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['model_5fof_2ehpp',['model_of.hpp',['../detail_2model__of_8hpp.html',1,'']]],
-  ['model_5fof_2ehpp',['model_of.hpp',['../model__of_8hpp.html',1,'']]]
+  ['enable_5fif_5ftype_2ehpp',['enable_if_type.hpp',['../enable__if__type_8hpp.html',1,'']]]
 ];

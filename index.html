@@ -38,7 +38,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Boost.Dispatch
-   &#160;<span id="projectnumber">0.0.2 (release)</span>
+   &#160;<span id="projectnumber">0.0.2-118-g284fc96 (pre-release)</span>
    </div>
    <div id="projectbrief">Unit and Performances Testing</div>
   </td>
@@ -186,26 +186,26 @@ Boost.Dispatch in action</h2>
 <li>A dispatching mechanism built on top of the hierarchies and overloading, that automates the use of tag dispatching with one or all arguments.</li>
 </ul>
 <p>Here is what the free function example looks like when written with Boost.Dispatch:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;boost/dispatch/hierarchy_of.hpp&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="hierarchy__of_8hpp.html">boost/dispatch/hierarchy_of.hpp</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceboost_1_1dispatch.html">boost::dispatch</a>;</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T t)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordflow">return</span> f(t, hierarchy_of(t) );</div>
+<div class="line">  <span class="keywordflow">return</span> f(t, <a class="code" href="structboost_1_1dispatch_1_1hierarchy__of.html">hierarchy_of</a>(t) );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T, scalar_&lt; floating_&lt;T&gt; &gt; <span class="keyword">const</span>&amp;)</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T, <a class="code" href="structboost_1_1dispatch_1_1scalar__.html">scalar_</a>&lt; <a class="code" href="structboost_1_1dispatch_1_1floating__.html">floating_&lt;T&gt;</a> &gt; <span class="keyword">const</span>&amp;)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T, scalar_&lt; integer_&lt;T&gt; &gt; <span class="keyword">const</span>&amp;)</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T, <a class="code" href="structboost_1_1dispatch_1_1scalar__.html">scalar_</a>&lt; <a class="code" href="structboost_1_1dispatch_1_1integer__.html">integer_&lt;T&gt;</a> &gt; <span class="keyword">const</span>&amp;)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordflow">return</span> 1;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T, scalar_&lt; unsigned_&lt;T&gt; &gt; <span class="keyword">const</span>&amp;)</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> f(T, <a class="code" href="structboost_1_1dispatch_1_1scalar__.html">scalar_</a>&lt; <a class="code" href="structboost_1_1dispatch_1_1signed__type___3_01_t_00_01unsigned_01_4.html">unsigned_&lt;T&gt;</a> &gt; <span class="keyword">const</span>&amp;)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordflow">return</span> 2;</div>
 <div class="line">}</div>

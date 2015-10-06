@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['primitive_5fof_5ft',['primitive_of_t',['../group__group-meta.html#ga917e1113a57993477bb58476ed952267',1,'boost::dispatch']]]
+  ['default_5fsite',['default_site',['../group__group-api_ga6b06ad11bfe107392a9337fb48ee3068.html#ga6b06ad11bfe107392a9337fb48ee3068',1,'boost::dispatch']]]
 ];

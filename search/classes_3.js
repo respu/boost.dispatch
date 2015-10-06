@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['transfer_5fqualifiers',['transfer_qualifiers',['../structboost_1_1dispatch_1_1meta_1_1transfer__qualifiers.html',1,'boost::dispatch::meta']]]
+  ['default_5fsite',['default_site',['../structboost_1_1dispatch_1_1ext_1_1default__site.html',1,'boost::dispatch::ext']]],
+  ['double_5f',['double_',['../structboost_1_1dispatch_1_1double__.html',1,'boost::dispatch']]]
 ];
