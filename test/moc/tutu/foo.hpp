@@ -11,56 +11,16 @@
 #ifndef TUTU_FOO_INCLUDED
 #define TUTU_FOO_INCLUDED
 
-#include <boost/dispatch/function/callable_object.hpp>
+#include <boost/dispatch/function/make_callable.hpp>
+#include <boost/dispatch/hierarchy/functions.hpp>
 #include "moc/tutu.hpp"
-
-namespace boost { namespace dispatch
-{
-  template<typename T, typename Site = boost::dispatch::default_site<T>>
-  struct functor
-  {
-    template<typename Other> using rebind = functor<T,Other>;
-
-    template<typename OtherSite, typename... Args>
-    BOOST_FORCEINLINE BOOST_AUTO_DECLTYPE on(Args&&... args) const
-    BOOST_AUTO_DECLTYPE_BODY( T::dispatch_to( OtherSite()
-                                            , boost::dispatch::hierarchy_of_t<Args>()...
-                                            )( std::forward<Args>(args)...)
-                            )
-
-    template<typename... Args>
-    BOOST_FORCEINLINE BOOST_AUTO_DECLTYPE operator()(Args&&... args) const
-    BOOST_AUTO_DECLTYPE_BODY( T::dispatch_to( Site()
-                                            , boost::dispatch::hierarchy_of_t<Args>()...
-                                            )( std::forward<Args>(args)...)
-                            )
-  };
-} }
 
 namespace tutu { namespace titi
 {
-  namespace tag
-  {
-    struct foo_ : boost::dispatch::function_<foo_>
-    {
-      BOOST_DISPATCH_CALLABLE_OBJECT(foo_,boost::dispatch::function_<foo_>);
-    };
-  }
+  namespace tag { BOOST_DISPATCH_MAKE_TAG(ext,foo_,boost::dispatch::elementwise_<foo_>); }
+  namespace ext { BOOST_DISPATCH_FUNCTION_DECLARATION(tag,foo_); }
 
-  namespace ext
-  {
-    template<typename T> struct impl_foo;
-
-    template<typename Site, typename... Ts>
-    BOOST_FORCEINLINE generic_dispatcher<tag::foo_, Site>
-    BOOST_DISPATCH_DISPATCHING_FUNCTION(foo)
-    (adl_helper const&, Site const&, boost::dispatch::type_<Ts> const&...)
-    {
-      return {};
-    }
-  }
-
-  static const boost::dispatch::functor<tag::foo_> foo = {};
+  BOOST_DISPATCH_FUNCTION_DEFINITION(tag::foo_,foo);
 } }
 
 #include "moc/arch/default/foo.hpp"

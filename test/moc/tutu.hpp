@@ -13,9 +13,9 @@
 
 #include <boost/dispatch/function/register_namespace.hpp>
 
-namespace tutu { namespace titi
+namespace tutu { namespace titi { namespace ext
 {
-  BOOST_DISPATCH_REGISTER_NAMESPACE(ext, (boost::dispatch::generic_dispatcher<Tag,Site>) );
-} }
+  BOOST_DISPATCH_REGISTER_NAMESPACE(boost::dispatch);
+} } }
 
 #endif

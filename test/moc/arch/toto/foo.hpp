@@ -13,19 +13,35 @@
 
 namespace tutu { namespace titi { namespace ext
 {
-  template<typename T> struct impl_foo<boost::dispatch::scalar_<boost::dispatch::int_<T>>>
+  struct dub
   {
-    float operator()( T ) const { return -13.37f; }
+    template<typename T> T operator()(T const& x) { return x*11; }
   };
 
-  template<typename T>
-  impl_foo<boost::dispatch::scalar_<boost::dispatch::int_<T>>>
-  dispatching_foo_( adl_helper const&, boost::dispatch::cpu_ const&
-                  , boost::dispatch::scalar_<boost::dispatch::int_<T>> const&
-                  )
+
+  template<typename F, typename T>
+  dub BOOST_DISPATCH_FALLBACK ( boost::dispatch::elementwise_<F> const&
+                              , boost::dispatch::cpu_ const&
+                              , boost::dispatch::scalar_<boost::dispatch::integer_<T>> const&
+                              )
   {
     return {};
   }
+
+  struct int_foo
+  {
+    template<typename T> float operator()( T ) const { return -13.37f; }
+  };
+
+  template<typename T>
+  int_foo BOOST_DISPATCH_IMPLEMENTS ( foo_
+                                    , boost::dispatch::cpu_ const&
+                                    , boost::dispatch::scalar_<boost::dispatch::int_<T>> const&
+                                    )
+  {
+    return {};
+  }
+
 } } }
 
 #endif
