@@ -11,7 +11,7 @@ add_definitions(-DBOOST_ENABLE_ASSERT_HANDLER)
 
 set ( SOURCES
       as.cpp
-#      dispatch.cpp
+      dispatch.cpp
     )
 
 make_unit( "boost.dispatch.api" ${SOURCES})

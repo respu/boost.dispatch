@@ -16,7 +16,7 @@
 #ifndef BOOST_DISPATCH_HIERARCHY_FORMAL_HPP_INCLUDED
 #define BOOST_DISPATCH_HIERARCHY_FORMAL_HPP_INCLUDED
 
-#include <boost/dispatch/hierarchy/base.hpp>
+#include <boost/dispatch/hierarchy/unspecified.hpp>
 
 namespace boost { namespace dispatch
 {
@@ -28,9 +28,9 @@ namespace boost { namespace dispatch
     no execution can take place. Functions defined on formal_ hardware are usually trampoline
     function that rewrite or transform code path.
   **/
-  struct formal_ : architecture_<formal_>
+  struct formal_ : unspecified_<formal_>
   {
-    using parent = architecture_<formal_>;
+    using parent        =  unspecified_<formal_>;
   };
 } }
 
